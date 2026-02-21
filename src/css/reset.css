@@ -1,0 +1,287 @@
+
+/* font */
+/* Pretendard */
+@import url("https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css");
+
+
+.font_200 {
+	font-weight: 200;
+}
+.font_275 {
+	font-weight: 275;
+}
+.font_300 {
+	font-weight: 300;
+}
+.font_400 {
+	font-weight: 400;
+}
+.font_500 {
+  	font-weight: 500;
+}
+.font_600 {
+  	font-weight: 600;
+}
+.font_700 {
+  	font-weight: 700;
+}
+.font_900 {
+  	font-weight: 900;
+}
+
+.font_w {
+	color: #fff;
+}
+.font_w80 {
+	color: rgba(255, 255, 255, 0.8);
+}
+.font_w60 {
+	color: rgba(255, 255, 255, 0.6);
+}
+.font_w40 {
+	color: rgba(255, 255, 255, 0.4);
+}
+.font_black {
+	color: #100C12;
+}
+
+* {
+	box-sizing: border-box;
+	letter-spacing: -0.3px;
+	 -webkit-font-smoothing: antialiased;
+}
+
+html, body  {
+	font-family: "Pretendard", sans-serif !important;
+	font-size: 62.5%;
+	position: relative;
+	height: 100%;
+	min-height: 100vh;
+}
+
+body {
+	position: relative;
+	line-height: 1.4;
+	background-color: #fff;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	line-height: 1.4;
+	font-family: inherit;
+	font-weight: 400;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+	word-break: keep-all;
+}
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table caption {
+    display: none;
+}
+
+address, em {
+    font-style: normal ;
+}
+
+
+legend {
+    display: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+button {
+	outline: 0;
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+	cursor: pointer;
+}
+
+:root {
+	--blue100: #F5F0FF;
+  --blue200: #E1DCF8;
+  --blue300: #C1B7F0;
+  --blue400: #3617CE;
+  --blue500: #3115B9;
+  --blue600: #29119B;
+  --blue700: #200E7C;
+  --blue800: #180A5D;
+  --blue900: #130848;
+	--red100: #FFECED;
+  --red300: #FFC4C8;
+  --red600: #FF404E;
+  --red900: #CC333E;
+  --black50: #f7f7f8;
+  --black100: #eeeef0;
+  --black200: #dadadd;
+  --black300: #b9bac0;
+  --black400: #93949d;
+  --black500: #767781;
+  --black600: #606169;
+  --black700: #4e4e56;
+  --black800: #3b3c3f;
+  --black900: #2F2F2F;
+  --black950: #1B1B1B;
+
+	--black: #000000;
+  --white: #FFFFFF;
+}
+
+@media screen and (max-width:1700px) {
+	html, body  {
+		font-size: 55%;
+	}
+}
+@media screen and (max-width:1500px) {
+	html, body  {
+		font-size: 52%;
+	}
+}
+@media screen and (max-width:1280px) {
+	html, body  {
+		font-size: 44%;
+	}
+}
+@media screen and (max-width:768px) {
+	html, body  {
+		font-size: 40%;
+	}
+}
+@media screen and (max-width:500px) {
+	html, body  {
+		font-size: 34%;
+	}
+}

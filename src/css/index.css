@@ -1,0 +1,62 @@
+/* 스플래시 배경 */
+.splash-screen {
+  position: fixed;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 100%; max-width: 768px; height: 100vh;
+  background-color: #3617CE;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  z-index: 10000;
+}
+
+/* 로고와 문구를 포함한 전체 컨텐츠 */
+.splash-content {
+  text-align: center;
+}
+
+/* 로고 전체: 아래에서 위로 + 페이드인 */
+.logo-svg {
+  opacity: 0;
+  transform: translateY(30px);
+  /* 0.8초 동안 부드럽게 상승하며 나타남 */
+  animation: logoAppear 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes logoAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 텍스트가 담길 p 태그 스타일 */
+#split-text {
+  margin-top: 15px;
+  color: transparent; /* 👈 원본 텍스트가 미리 보이는 것을 방지 */
+  font-size: 14px;
+  display: flex; /* 글자들을 가로로 나열 */
+  justify-content: center;
+  gap: 2px; /* 글자 사이 간격 */
+}
+
+/* 자바스크립트로 생성될 개별 글자(span) 스타일 */
+.char {
+  opacity: 0;
+  color: #fff;
+  transform: translateY(10px);
+  display: inline-block;
+  animation: textAppear 0.2s ease-out forwards;
+}
+
+@keyframes textAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 스플래시 화면 종료 (부드럽게 사라짐) */
+.splash-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-in-out;
+}
