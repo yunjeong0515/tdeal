@@ -8,14 +8,168 @@
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="src/css/setting.css">
   <link rel="stylesheet" href="src/css/layout.css">
-  <link rel="stylesheet" href="src/css/index.css">
+  <link rel="stylesheet" href="src/css/search.css">
   <script src="src/js/include.js" defer></script>
 </head>
 <body >
-  <div class="app-container ">
+  <div class="app-container">
   <div data-include="src/include/header-search.html"></div>
   <main>
+    <main class="search-content">
+      <section class="search-section recent-search">
+        <div class="wrapper">
+        <div class="section-header">
+          <h2 class="section-title font_600">최근 검색어</h2>
+          <button type="button" class="btn-delete-all">전체삭제</button>
+        </div>
 
+        <div class="recent-keywords">
+          <ul class="keyword-list">
+            <li class="keyword-item">
+              <span>정관장 홍삼</span>
+              <button type="button" class="btn-remove" >
+                <img src="src/img/icon/remove_b7.svg" alt="삭제" />
+              </button>
+            </li>
+            <li class="keyword-item">
+              <span>선물세트</span>
+              <button type="button" class="btn-remove" >
+                <img src="src/img/icon/remove_b7.svg" alt="삭제" />
+              </button>
+            </li>
+            <li class="keyword-item">
+              <span>아이폰</span>
+              <button type="button" class="btn-remove" >
+                <img src="src/img/icon/remove_b7.svg" alt="삭제" />
+              </button>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </section>
+      <section class="search-section popular-search">
+        <div class="wrapper">
+        <div class="section-header">
+          <h2 class="section-title font_600">인기 검색어</h2>
+          <span class="update-time">02.21 18:00 기준</span>
+        </div>
+
+        <ul class="popular-list">
+          <li class="popular-item">
+            <a href="#">
+              <div class="rank-info">
+                <span class="rank accent">1</span>
+                <span class="name">설 선물세트</span>
+              </div>
+              <div class="status-icon">
+                <img src="src/img/icon/rank_up.svg" alt="" />
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div class="rank-info">
+                <span class="rank accent">2</span>
+                <span class="name">정관장 홍삼정</span>
+              </div>
+              <div class="status-icon">
+                <img src="src/img/icon/rank_up.svg" alt="" />
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div class="rank-info">
+                <span class="rank accent">3</span>
+                <span class="name">애플 에어팟 프로</span>
+              </div>
+              <div class="status-icon">
+                <img src="src/img/icon/rank_default.svg" alt="" />
+              </div>
+            </a>
+          </li>
+
+          <li class="popular-item">
+            <a href="#">
+              <div class="rank-info">
+                <span class="rank">4</span>
+                <span class="name">다이슨 에어랩</span>
+              </div>
+              <div class="status-icon">
+                <img src="src/img/icon/rank_default.svg" alt="" />
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div class="rank-info">
+                <span class="rank">5</span>
+                <span class="name">비타민C</span>
+              </div>
+              <div class="status-icon">
+                <img src="src/img/icon/rank_down.svg" alt="" />
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div class="rank-info">
+                <span class="rank">6</span>
+                <span class="name">제주 감귤 5kg</span>
+              </div>
+              <div class="status-icon">
+                <img src="src/img/icon/rank_down.svg" alt="" />
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div class="rank-info">
+                <span class="rank">7</span>
+                <span class="name">무선 이어폰</span>
+              </div>
+              <div class="status-icon">
+                <img src="src/img/icon/rank_default.svg" alt="" />
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div class="rank-info">
+                <span class="rank">8</span>
+                <span class="name">나이키 운동화</span>
+              </div>
+              <div class="status-icon">
+                <img src="src/img/icon/rank_default.svg" alt="" />
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div class="rank-info">
+                <span class="rank">9</span>
+                <span class="name">스팸 선물세트</span>
+              </div>
+              <div class="status-icon">
+                <img src="src/img/icon/rank_default.svg" alt="" />
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div class="rank-info">
+                <span class="rank">10</span>
+                <span class="name">핸드크림 세트</span>
+              </div>
+              <div class="status-icon">
+                <img src="src/img/icon/rank_down.svg" alt="" />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </section>
+    </main>
   </main>
 
 
