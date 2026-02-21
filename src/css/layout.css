@@ -49,11 +49,29 @@
   object-fit: contain;
 }
 
+
 .search-header .wrapper .btn-back {
   width: 24px;
   height: 24px;
 }
 .search-header .wrapper .btn-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.category-header {
+  border-bottom: 1px solid var(--black100);
+}
+.category-header .wrapper .page-title {
+  font-size: 20px;
+  color: var(--black950);
+}
+.category-header .wrapper .search-btn {
+  width: 24px;
+  height: 24px;
+}
+.category-header  .search-btn img {
   width: 100%;
   height: 100%;
   object-fit: contain;

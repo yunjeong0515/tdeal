@@ -20,11 +20,10 @@ window.addEventListener('load', function() {
 
   function moveIndicator(target) {
     if (!target || !indicator) return;
-    const width = target.getBoundingClientRect().width;
     const left = target.offsetLeft;
-
-    indicator.style.width = `${width}px`;
+    const width = target.offsetWidth;
     indicator.style.left = `${left}px`;
+    indicator.style.width = `${width}px`;
   }
 
   // 탭 클릭 이벤트 설정
