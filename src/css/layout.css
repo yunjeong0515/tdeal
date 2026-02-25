@@ -1,7 +1,7 @@
 .app-container {
   max-width: 768px;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #fff;
   padding: 68px 0 0 0;
   position: relative;

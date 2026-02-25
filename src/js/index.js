@@ -1,96 +1,76 @@
 window.addEventListener('load', function() {
-  const textContainer = document.getElementById('split-text');
-  const text = textContainer.innerText;
-  const characters = text.split('');
+  // 스플래시 로직 실행 (파일을 분리했다면 여기서 호출)
+  if (typeof runSplashScreen === 'function') {
+    runSplashScreen();
+  }
 
-  textContainer.innerText = '';
+  // 1. 탭 메뉴 초기화
+  initTabMenu();
 
-  characters.forEach((char, index) => {
-    const span = document.createElement('span');
-    span.classList.add('char');
-    span.innerText = char === ' ' ? '\u00A0' : char;
-    span.style.animationDelay = `${0.5 + (index * 0.1)}s`;
-    textContainer.appendChild(span);
-  });
+  // 2. Swiper 초기화
+  initSwiper();
+});
 
-  // --- 탭 메뉴 미끄러지는 바 로직 ---
-  const wrapper = document.querySelector('.tab-wrapper');
+function initTabMenu() {
   const tabs = document.querySelectorAll('.tab-item');
   const indicator = document.querySelector('.tab-indicator');
 
-  function moveIndicator(target) {
-    if (!target || !indicator) return;
-    const left = target.offsetLeft;
-    const width = target.offsetWidth;
-    indicator.style.left = `${left}px`;
-    indicator.style.width = `${width}px`;
-  }
+  if (!tabs.length || !indicator) return;
 
-  // 탭 클릭 이벤트 설정
+  // 초기 위치 잡기
+  moveIndicator(document.querySelector('.tab-item.active'));
+
   tabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
       tabs.forEach(t => t.classList.remove('active'));
       e.target.classList.add('active');
       moveIndicator(e.target);
-
-      e.target.scrollIntoView({
-        behavior: 'smooth',
-        inline: 'center',
-        block: 'nearest'
-      });
     });
   });
+}
 
-  // 스플래시 종료 및 메인 컨텐츠 초기화
-  setTimeout(() => {
-    const splash = document.getElementById('splash-screen');
-    splash.classList.add('fade-out');
-
-    // 스플래시가 사라지기 시작할 때 탭 바 위치를 잡음
-    const activeTab = document.querySelector('.tab-item.active');
-    if (activeTab) {
-      moveIndicator(activeTab);
-    }
-
-    // Swiper 배너가 있다면 여기서 함께 초기화해주는 것이 안전합니다.
-    initSwiper();
-
-  }, 4000);
-});
-
+function moveIndicator(target) {
+  const indicator = document.querySelector('.tab-indicator');
+  if (!target || !indicator) return;
+  indicator.style.left = `${target.offsetLeft}px`;
+  indicator.style.width = `${target.offsetWidth}px`;
+}
 
 function initSwiper() {
   const swiperElement = document.querySelector('.mainSwiper');
   if (!swiperElement) return;
 
+  // 1. 실제 슬라이드들(복사본 제외)을 가져옵니다.
+  const slides = swiperElement.querySelectorAll('.swiper-slide');
+  const totalSlides = slides.length;
 
-  const currentEl = document.querySelector('.swiper-pagination-badge .current');
-  const totalEl = document.querySelector('.swiper-pagination-badge .total');
+  // 2. 각 슬라이드 안에 배지 HTML을 자동으로 삽입합니다.
+  slides.forEach((slide, index) => {
+    const badgeHTML = `
+      <div class="swiper-pagination-badge">
+        <div class="pagination-info">
+          <span class="current">${index + 1}</span>
+          <span class="divider"></span>
+          <span class="total">${totalSlides}</span>
+        </div>
+        <button type="button" class="btn-view-all">
+          <img src="src/img/icon/add_w.svg" alt="" style="width:12px; height:12px;" />
+        </button>
+      </div>
+    `;
+    // 슬라이드 내용 맨 뒤에 추가
+    slide.insertAdjacentHTML('beforeend', badgeHTML);
+  });
 
-
-  const realSlides = swiperElement.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)');
-  if (totalEl) totalEl.innerText = realSlides.length;
-
+  // 3. Swiper 초기화 (이제 숫자는 고정되었으니 넘기기만 하면 됩니다)
   const mainSwiper = new Swiper(".mainSwiper", {
     slidesPerView: 1.02,
     centeredSlides: true,
     spaceBetween: 15,
+    loop: true,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
-    },
-    on: {
-      init: function() {
-
-        if (currentEl) {
-          currentEl.innerText = this.realIndex + 1;
-        }
-      },
-      slideChange: function () {
-        if (currentEl) {
-          currentEl.innerText = this.realIndex + 1;
-        }
-      }
     }
   });
 }
