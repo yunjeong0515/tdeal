@@ -3,14 +3,14 @@
   margin: 0 auto;
   min-height: 100vh;
   background-color: #fff;
-  padding-top: 68px; /* 헤더 고정 높이 */
+  padding: 68px 0 0 0;
   position: relative;
   box-shadow: 0 0 20px rgba(0,0,0,0.05);
 }
 
 /* 하단 탭바가 있는 페이지 */
 .app-container.has-tabbar {
-  padding-bottom: calc(60px + env(safe-area-inset-bottom));
+  padding: 68px 0 59px 0;
 }
 
 
@@ -49,11 +49,29 @@
   object-fit: contain;
 }
 
+
 .search-header .wrapper .btn-back {
   width: 24px;
   height: 24px;
 }
 .search-header .wrapper .btn-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.category-header {
+  border-bottom: 1px solid var(--black100);
+}
+.category-header .wrapper .page-title {
+  font-size: 20px;
+  color: var(--black950);
+}
+.category-header .wrapper .search-btn {
+  width: 24px;
+  height: 24px;
+}
+.category-header  .search-btn img {
   width: 100%;
   height: 100%;
   object-fit: contain;

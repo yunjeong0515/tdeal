@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T deal</title>
+
+
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/setting.css">
+  <link rel="stylesheet" href="src/css/layout.css">
+  <link rel="stylesheet" href="src/css/index.css">
+  <script src="src/js/include.js" defer></script>
+  <script src="src/js/index.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body >
+
+  <div class="app-container has-tabbar">
+  <div data-include="src/include/header.html"></div>
+  <main class="home-content">
+    <nav class="tab-menu">
+      <div class="tab-wrapper">
+        <div class="tab-indicator"></div>
+        <button class="tab-item active">홈</button>
+        <button class="tab-item">신상품</button>
+        <button class="tab-item">베스트</button>
+        <button class="tab-item">브랜드관</button>
+        <button class="tab-item">알뜰존</button>
+        <button class="tab-item">이벤트</button>
+        <button class="tab-item">쿠폰팩</button>
+      </div>
+    </nav>
+    <div class="inner">
+    <section class="main-banner">
+      <div class="swiper mainSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="src/img/index/mainbanner01.jpg"></div>
+          <div class="swiper-slide"><img src="src/img/index/mainbanner02.jpg"></div>
+          <div class="swiper-slide"><img src="src/img/index/mainbanner01.jpg"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-wrap">
+      <nav class="event-nav">
+        <ul class="event-nav-list">
+          <li class="event-nav-item">
+            <a href="#">
+              <div class="icon-circle"><img src="src/img/icon/eventnav01.png" alt=""></div>
+              <span>설선물</span>
+            </a>
+          </li>
+          <li class="event-nav-item">
+            <a href="#">
+              <div class="icon-circle"><img src="src/img/icon/eventnav02.png" alt=""></div>
+              <span>신상품</span>
+            </a>
+          </li>
+          <li class="event-nav-item">
+            <a href="#">
+              <div class="icon-circle"><img src="src/img/icon/eventnav03.png" alt=""></div>
+              <span>래플</span>
+            </a>
+          </li>
+          <li class="event-nav-item">
+            <a href="#">
+              <div class="icon-circle"><img src="src/img/icon/eventnav04.png" alt=""></div>
+              <span>1000원~</span>
+            </a>
+          </li>
+          <li class="event-nav-item">
+            <a href="#">
+              <div class="icon-circle"><img src="src/img/icon/eventnav05.png" alt=""></div>
+              <span>바우처전용관</span>
+            </a>
+          </li>
+          <li class="event-nav-item">
+            <a href="#">
+              <div class="icon-circle"><img src="src/img/icon/eventnav06.png" alt=""></div>
+              <span>반갑딜</span>
+            </a>
+          </li>
+          <li class="event-nav-item">
+            <a href="#">
+              <div class="icon-circle"><img src="src/img/icon/eventnav07.png" alt=""></div>
+              <span>1+1</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    <section class="product-section best">
+      <div class="wrapper">
+      <div class="section-header">
+        <h2 class="section-title font_600">오늘 BEST 상품</h2>
+        <a href="#" class="view-all">
+          <span>전체보기</span>
+          <div class="icon">
+            <img src="src/img/icon/arrow_back_b7.svg" alt="" />
+          </div>
+        </a>
+      </div>
+      </div>
+      <div class="product-container">
+      <ul class="product-list">
+        <li class="product-item">
+          <div class="product-thumb">
+            <img src="src/img/product/product01.jpg" alt="">
+            <button type="button" class="btn-wish" aria-label="찜하기">
+              <img src="src/img/icon/like.svg" alt="wish" />
+            </button>
+            </div>
+          <div class="product-info">
+            <span class="name">명절 선물 홍삼 정옥고 세트</span>
+            <div class="price-container">
+              <div class="origin-row">
+                <span class="badge-benefit">T혜택가</span>
+                <span class="origin-price">68,750원</span>
+              </div>
+              <div class="sale-row">
+                <span class="discount">20%</span>
+                <span class="price">55,000원</span>
+              </div>
+            </div>
+            <div class="rating-container">
+              <div class="star-icon">
+                <img src="src/img/icon/star_b5.svg" alt=""/>
+              </div>
+              <span class="rating-value">4.8</span>
+              <span class="rating-count">(1,250)</span>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    </section>
+  </div>
+  </div>
+    </div>
+
+  </main>
+  <div data-include="src/include/tabbar.html"></div>
+
+</div>
+</body>
+</html>
+<!-- <script>
+  (function() {
+    // 1. 세션 스토리지 값 확인 (문자열 'true'인지 정확히 비교)
+    const splashSeen = sessionStorage.getItem('splashSeen');
+
+    console.log('현재 스플래시 상태:', splashSeen);
+
+    // 2. 'true'가 아닐 때만 splash.html로 이동
+    if (splashSeen !== 'true') {
+
+      location.replace('index.html');
+    } else {
+
+    }
+  })();
+</script> -->

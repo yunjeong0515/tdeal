@@ -32,3 +32,105 @@
   width: 20px; /* 아이콘 크기 조절 */
   height: 20px;
 }
+
+
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.product-item .product-thumb {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.product-item .product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-item .btn-wish {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+}
+
+.product-item .product-info .name {
+  font-size: 14px;
+  color: var(--black950);
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 2.8em;
+}
+
+.product-item .product-info .price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 2px;
+}
+.product-item .product-info .price-container .origin-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-item .product-info .price-container .origin-row .badge-benefit {
+  font-size: 11px;
+  line-height: 1;
+  background-color: var(--blue100);
+  color:var(--blue400);
+  padding: 4px 5px;
+  border-radius: 5px;
+}
+.product-item .product-info .price-container .origin-row .origin-price {
+  font-size: 12px;
+  color: var(--black300);
+  text-decoration: line-through;
+}
+
+.product-item .product-info .price-container .sale-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.product-item .product-info .price-container .sale-row .discount {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--red600);
+}
+.product-item .product-info .price-container .sale-row .price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black950);
+}
+.product-item .product-info .rating-container {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.product-item .product-info .rating-container .star-icon {
+  width: 15px;
+  height: 15px;
+}
+.product-item .product-info .rating-container .star-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-item .product-info .rating-container .rating-value {
+  font-size: 12px;
+  color: var(--black500);
+}
+.product-item .product-info  .rating-container .rating-count {
+  font-size: 12px;
+  color: var(--black500);
+}
