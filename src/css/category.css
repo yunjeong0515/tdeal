@@ -1,0 +1,111 @@
+/* 화면 전체 레이아웃 고정 */
+.categorypage-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 카테고리 메인 컨테이너 */
+.categorypage-container .category-main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.side-nav {
+  width: 120px;
+  height: 100%;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: var(--black100);
+}
+.side-nav .depth1-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.side-nav .depth1-list li {
+  width: 100%;
+}
+.side-nav .depth1-list li button {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding: 16px;
+  color: var(--black800);
+  background-color: var(--black100);
+}
+.side-nav .depth1-list li.active button{
+  font-weight: 600;
+  color: var(--black950);
+  background-color: #fff;
+}
+.side-nav::-webkit-scrollbar {
+  display: none;
+}
+.category-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1; /* 나머지 너비 다 차지 */
+  height: 100%; /* 부모 높이 다 차지 */
+  overflow-y: auto; /* 세로 스크롤 허용 */
+  padding: 20px; /* 내부 여백 */
+}
+.category-content .current-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.category-content .current-category .category-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.category-content .current-category .category-title span {
+  font-size: 15px;
+  color: var(--black900);
+}
+.category-content .current-category .category-title .icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--blue100);
+}
+.category-content .current-category .category-title .icon-box .icon {
+  width: 20px;
+  height: 20px;
+}
+.category-content .current-category .category-title .icon-box .iconimg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.category-content .current-category .arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+.category-content .current-category .arrow-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.category-content .depth2-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 5px;
+}
+.category-content  .depth2-list li a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500px;
+  height: 30px;
+  color: var(--black900);
+}

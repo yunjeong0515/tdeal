@@ -1,0 +1,86 @@
+const productData = [
+  {
+    id: 1,
+    category: 'best seol recommended',
+    name: '[설화수] 자음 2종 기획세트(+사은품 증정)외 기초 화장품/클렌징/선크림/쿠션 모음전(12종 중 택1)(5,000개 한정 수량)',
+    thumb: 'src/img/product/product01.jpg',
+    originPrice: '68,750원',
+    discount: '20%',
+    price: '55,000원',
+    rating: '4.8',
+    reviewCount: '1,200',
+    tags: ['무료배송', '기간특가']
+  },
+  {
+    id: 2,
+    category: 'best seol recommended',
+    name: '[폴로랄프로렌] 더블 니트 후드(색상 4종 중 택 1)(1,000개 한정 수량)',
+    thumb: 'src/img/product/product02.jpg',
+    originPrice: '55,960',
+    discount: '86%',
+    price: '55,960',
+    rating: '4.9',
+    reviewCount: '268',
+    tags: ['무료배송', '기간특가']
+  },
+  {
+    id: 3,
+    category: 'best recent recommended',
+    name: '[프로코] 실내건조 7종효소 라벤더 세탁세제 2.5L(2+2/총 4개입) 외 세탁세제/섬유유연제/주방세제 모음전',
+    thumb: 'src/img/product/product03.jpg',
+    originPrice: '21,900',
+    discount: '55%',
+    price: '9,900',
+    rating: '4.9',
+    reviewCount: '487',
+    tags: ['무료배송', ]
+  },
+  {
+    id: 4,
+    category: 'best seol',
+    name: '[더프레시] 2025년산 밥맛 좋은 새청무 특등급(10kg/20kg 택 1)(각 5,000개 한정 수량)',
+    thumb: 'src/img/product/product04.jpg',
+    originPrice: '42,400',
+    discount: '24%',
+    price: '32,170',
+    rating: '4.9',
+    reviewCount: '268',
+    tags: ['무료배송']
+  },
+  {
+    id: 5,
+    category: 'best wish',
+    name: '[폴로랄프로렌] 코튼 롱 슬리브(색상 3종 중 택 1)(1,000개 한정 수량)',
+    thumb: 'src/img/product/product05.jpg',
+    originPrice: '149,000원',
+    discount: '83%',
+    price: '25,900',
+    rating: '4.9',
+    reviewCount: '268',
+    tags: ['무료배송']
+  },
+  {
+    id: 6,
+    category: 'best wish',
+    name: '[제주용암수] 오리온 닥터유 제주용암수(2L×18병) 외 2종(각 5,000개 한정 수량)',
+    thumb: 'src/img/product/product06.jpg',
+    originPrice: '30,600원',
+    discount: '68%',
+    price: '9,900',
+    rating: '4.9',
+    reviewCount: '268',
+    tags: ['무료배송']
+  },
+  {
+    id: 7,
+    category: 'best seol recommended',
+    name: '[베지밀] 커피 블렌딩 소이 두유 라떼(190ml×10입) 2박스 총 20개(1,000개 한정 수량)',
+    thumb: 'src/img/product/product07.jpg',
+    originPrice: '46,000원',
+    discount: '78%',
+    price: '9,900',
+    rating: '4.9',
+    reviewCount: '268',
+    tags: ['무료배송']
+  },
+];

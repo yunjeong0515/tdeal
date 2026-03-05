@@ -8,15 +8,80 @@
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="src/css/setting.css">
   <link rel="stylesheet" href="src/css/layout.css">
-  <link rel="stylesheet" href="src/css/search.css">
+  <link rel="stylesheet" href="src/css/like.css">
   <script src="src/js/include.js" defer></script>
+  <script src="src/js/products.js"></script>
+  <script src="src/js/like.js"></script>
 </head>
-<body >
+<body>
   <div class="app-container has-tabbar">
-  <!-- <div data-include="src/include/header-category.html"></div> -->
-  <main>
-  </main>
-  <div data-include="src/include/tabbar.html"></div>
-</div>
+    <div data-include="src/include/header-like.html"></div>
+
+    <main class="like-content">
+      <div class="top-tab-menu">
+        <div class="tab-wrapper">
+          <div class="tab-indicator"></div>
+          <button type="button" class="active"  data-tab="recent">최근 본 상품</button>
+          <button type="button" data-tab="wish">찜 (2)</button>
+        </div>
+      </div>
+
+      <div class="wish-container" style="display: block;">
+        <section class="product-section wish">
+          <div class="section-header">
+            <div class="title-wrap">
+              <div class="wrapper">
+                <h2 class="section-title font_600">총 <strong class="total-count">2</strong>개</h2>
+                <button type="button" class="btn-edit">편집</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-container">
+            <ul class="product-list">
+              </ul>
+              <div class="empty-state" style="display: none;">
+                <p>찜한 상품이 없습니다.</p>
+              </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="recent-container" style="display: none;">
+        <section class="product-section recent">
+          <div class="section-header">
+            <div class="title-wrap">
+              <div class="wrapper">
+                <h2 class="section-title font_600">총 <strong class="total-count">2</strong>개</h2>
+                <button type="button" class="btn-edit">편집</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-container">
+            <ul class="product-list recent">
+              </ul>
+          </div>
+        </section>
+
+        <section class="product-section recommended">
+          <div class="section-header">
+            <div class="title-wrap">
+              <div class="wrapper">
+                <h2 class="section-title font_600">찾으신 상품과 <br>함께 많이 본 상품</h2>
+                <a href="#" class="view-all">
+                  <span>더보기</span>
+                  <div class="icon"><img src="src/img/icon/arrow_back_b7.svg" alt=""></div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product-container">
+            <ul class="product-list recommended-list">
+              </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div data-include="src/include/tabbar.html"></div>
+  </div>
 </body>
 </html>
