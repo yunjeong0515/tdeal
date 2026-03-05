@@ -1,15 +1,88 @@
 window.addEventListener('load', function() {
-  // 스플래시 로직 실행 (파일을 분리했다면 여기서 호출)
   if (typeof runSplashScreen === 'function') {
     runSplashScreen();
+  }
+
+  if (typeof productData !== 'undefined') {
+    renderProducts('best', '.product-section.best .product-list');
+
+    renderProducts('seol', '.product-section.seol .product-list');
+  } else {
+    console.error("products.js가 로드되지 않았거나 productData가 정의되지 않았습니다.");
   }
 
   // 1. 탭 메뉴 초기화
   initTabMenu();
 
   // 2. Swiper 초기화
-  initSwiper();
+  initMainSwiper();
+  initMidSwiper();
 });
+
+function renderProducts(category, targetSelector) {
+  const targetEl = document.querySelector(targetSelector);
+  if (!targetEl || typeof productData === 'undefined') return;
+
+  const filteredProducts = productData.filter(p => p.category.includes(category));
+
+  const htmlContent = filteredProducts.map(product => `
+    <li class="product-item">
+      <div class="product-thumb">
+        <img src="${product.thumb}" alt="${product.name}">
+        <button type="button" class="btn-wish"><img src="src/img/icon/like.svg" alt="wish" /></button>
+      </div>
+      <div class="product-info">
+        <span class="name">${product.name}</span>
+        <div class="price-container">
+          <div class="origin-row">
+            <span class="badge-benefit">T혜택가</span>
+            <span class="origin-price">${product.originPrice}</span>
+          </div>
+          <div class="sale-row">
+            <span class="discount">${product.discount}</span>
+            <span class="price">${product.price}</span>
+          </div>
+          <div class="sub-info">
+          <div class="rating-row">
+            <img src="src/img/icon/star_b5.svg" alt="별점" class="icon-star">
+            <span class="rating">${product.rating}</span>
+            <span class="review-count">(${product.reviewCount})</span>
+          </div>
+
+          ${product.tags && product.tags.length > 0 ? `
+          <ul class="tag-list">
+            ${product.tags.map(tag => `<li class="tag-item">${tag}</li>`).join('')}
+          </ul>
+          ` : ''}
+        </div>
+        </div>
+        </div>
+    </li>
+  `).join('');
+
+  targetEl.innerHTML = htmlContent;
+}
+
+function initCategoryTabs() {
+  const tabButtons = document.querySelectorAll('.product-container .category-tab button');
+  const productListSelector = '.product-section.seol .product-list';
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+    경
+      tabButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+
+      const categoryKeyword = this.getAttribute('data-cate');
+
+      if (categoryKeyword) {
+
+        renderProducts(categoryKeyword, productListSelector);
+      }
+    });
+  });
+}
 
 function initTabMenu() {
   const tabs = document.querySelectorAll('.tab-item');
@@ -36,7 +109,7 @@ function moveIndicator(target) {
   indicator.style.width = `${target.offsetWidth}px`;
 }
 
-function initSwiper() {
+function initMainSwiper() {
   const swiperElement = document.querySelector('.mainSwiper');
   if (!swiperElement) return;
 
@@ -58,19 +131,32 @@ function initSwiper() {
         </button>
       </div>
     `;
-    // 슬라이드 내용 맨 뒤에 추가
+
     slide.insertAdjacentHTML('beforeend', badgeHTML);
   });
 
-  // 3. Swiper 초기화 (이제 숫자는 고정되었으니 넘기기만 하면 됩니다)
+
   const mainSwiper = new Swiper(".mainSwiper", {
     slidesPerView: 1.02,
     centeredSlides: true,
     spaceBetween: 15,
-    loop: true,
+    // loop: true,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     }
+  });
+}
+
+function initMidSwiper() {
+  const midSwiperEl = document.querySelector('.midSwiper');
+  if (!midSwiperEl) return;
+
+  new Swiper(".midSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
   });
 }

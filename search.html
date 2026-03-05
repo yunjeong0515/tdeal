@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="src/css/layout.css">
   <link rel="stylesheet" href="src/css/search.css">
   <script src="src/js/include.js" defer></script>
+  <script src="src/js/products.js"></script>
+  <script src="src/js/search.js"></script>
 </head>
 <body >
   <div class="app-container">
@@ -169,10 +171,21 @@
         </ul>
       </div>
       </section>
+      <section class="product-section viewed">
+        <div class="section-header">
+          <div class="wrapper">
+          <div class="title-wrap">
+            <h2 class="section-title font_600">최근 본 상품</h2>
+            <button type="button" class="btn-delete-all">전체삭제</button>
+          </div>
+          </div>
+        </div>
+        <div class="product-container">
+          <ul class="product-list">
+            </ul>
+        </div>
+      </section>
     </main>
-
-
-
 </div>
 </body>
 </html>

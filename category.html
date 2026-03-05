@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="src/css/setting.css">
   <link rel="stylesheet" href="src/css/layout.css">
-  <link rel="stylesheet" href="src/css/search.css">
+  <link rel="stylesheet" href="src/css/category.css">
   <script src="src/js/include.js" defer></script>
 </head>
 <body >
-  <div class="app-container has-tabbar">
+  <div class="app-container has-tabbar categorypage-container">
   <div data-include="src/include/header-category.html"></div>
   <main class="category-main">
     <aside class="side-nav">
@@ -30,42 +30,70 @@
 
     <section class="category-content">
       <div class="content-header">
-        <h2 class="current-category">식품</h2>
-        <a href="#" class="view-all">
-          전체보기
-          <img src="src/img/icon/arrow_right_gray.svg" alt="이동">
-        </a>
-      </div>
 
-      <ul class="depth2-grid">
+        <div class="current-category">
+          <div class="category-title">
+            <div class="icon-box">
+              <div class="icon">
+                <img src="src/img/icon/meal_blue.svg" alt="식품" />
+              </div>
+            </div>
+            <span class="font_600">식품</span>
+          </div>
+          <div class="arrow-icon">
+            <img src="src/img/icon/arrow_back_b7.svg" alt="이동">
+          </div>
+        </div>
+      </div>
+      <ul class="depth2-list">
         <li class="depth2-item">
           <a href="#">
-            <div class="icon-wrap"><img src="src/img/category/sub_food_01.png" alt=""></div>
-            <span>신선식품</span>
+            <span>축산</span>
           </a>
         </li>
         <li class="depth2-item">
           <a href="#">
-            <div class="icon-wrap"><img src="src/img/category/sub_food_02.png" alt=""></div>
+            <span>농산물</span>
+          </a>
+        </li>
+        <li class="depth2-item">
+          <a href="#">
+            <span>수산</span>
+          </a>
+        </li>
+        <li class="depth2-item">
+          <a href="#">
+            <span>반찬</span>
+          </a>
+        </li>
+        <li class="depth2-item">
+          <a href="#">
+            <span>김치</span>
+          </a>
+        </li>
+        <li class="depth2-item">
+          <a href="#">
+            <span>음료</span>
+          </a>
+        </li>
+        <li class="depth2-item">
+          <a href="#">
+            <span>과자</span>
+          </a>
+        </li>
+        <li class="depth2-item">
+          <a href="#">
+            <span>아이스크림 / 빙수</span>
+          </a>
+        </li>
+        <li class="depth2-item">
+          <a href="#">
             <span>가공식품</span>
           </a>
         </li>
         <li class="depth2-item">
           <a href="#">
-            <div class="icon-wrap"><img src="src/img/category/sub_food_03.png" alt=""></div>
-            <span>간편조리식</span>
-          </a>
-        </li>
-        <li class="depth2-item">
-          <a href="#">
-            <div class="icon-wrap"><img src="src/img/category/sub_food_04.png" alt=""></div>
-            <span>음료/커피</span>
-          </a>
-        </li>
-        <li class="depth2-item">
-          <a href="#">
-            <div class="icon-wrap"><img src="src/img/category/sub_food_05.png" alt=""></div>
-            <span>과자/간식</span>
+            <span>냉동 / 간편조리식품</span>
           </a>
         </li>
       </ul>

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="src/css/layout.css">
   <link rel="stylesheet" href="src/css/index.css">
   <script src="src/js/include.js" defer></script>
+  <script src="src/js/products.js"></script>
   <script src="src/js/index.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -39,7 +40,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="src/img/index/mainbanner01.jpg"></div>
           <div class="swiper-slide"><img src="src/img/index/mainbanner02.jpg"></div>
-          <div class="swiper-slide"><img src="src/img/index/mainbanner01.jpg"></div>
+          <!-- <div class="swiper-slide"><img src="src/img/index/mainbanner01.jpg"></div> -->
         </div>
       </div>
     </section>
@@ -92,8 +93,9 @@
         </ul>
       </nav>
     <section class="product-section best">
-      <div class="wrapper">
       <div class="section-header">
+        <div class="title-wrap">
+          <div class="wrapper">
         <h2 class="section-title font_600">오늘 BEST 상품</h2>
         <a href="#" class="view-all">
           <span>전체보기</span>
@@ -101,41 +103,62 @@
             <img src="src/img/icon/arrow_back_b7.svg" alt="" />
           </div>
         </a>
+        </div>
+      </div>
+      <div class="category-tab">
+        <ul class="tab-list">
+          <li><button type="button" class="active" data-cate="seol">전체</button></li>
+          <li><button type="button" data-cate="health">건강식품</button></li>
+          <li><button type="button" data-cate="fruit">과일세트</button></li>
+          <li><button type="button" data-cate="meat">한우</button></li>
+          <li><button type="button" data-cate="seafood">굴비·수산</button></li>
+          <li><button type="button" data-cate="oil">통조림·식용유</button></li>
+        </ul>
       </div>
       </div>
       <div class="product-container">
-      <ul class="product-list">
-        <li class="product-item">
-          <div class="product-thumb">
-            <img src="src/img/product/product01.jpg" alt="">
-            <button type="button" class="btn-wish" aria-label="찜하기">
-              <img src="src/img/icon/like.svg" alt="wish" />
-            </button>
-            </div>
-          <div class="product-info">
-            <span class="name">명절 선물 홍삼 정옥고 세트</span>
-            <div class="price-container">
-              <div class="origin-row">
-                <span class="badge-benefit">T혜택가</span>
-                <span class="origin-price">68,750원</span>
+        <ul class="product-list">
+          </ul>
+      </div>
+    </section>
+    <section class="mid-banner swiper midSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#"><img src="src/img/index/mid_banner01.jpg" alt="설 혜택 1"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="src/img/index/mid_banner02.jpg" alt="설 혜택 2"></a>
+        </div>
+      </div>
+    </section>
+    <section class="product-section seol">
+      <div class="section-header">
+          <div class="title-wrap">
+            <div class="wrapper">
+            <h2 class="section-title font_600">설 선물 상품</h2>
+            <a href="#" class="view-all">
+              <span>전체보기</span>
+              <div class="icon">
+                <img src="src/img/icon/arrow_back_b7.svg" alt="" />
               </div>
-              <div class="sale-row">
-                <span class="discount">20%</span>
-                <span class="price">55,000원</span>
-              </div>
-            </div>
-            <div class="rating-container">
-              <div class="star-icon">
-                <img src="src/img/icon/star_b5.svg" alt=""/>
-              </div>
-              <span class="rating-value">4.8</span>
-              <span class="rating-count">(1,250)</span>
-            </div>
+            </a>
           </div>
-        </li>
-
-      </ul>
-    </div>
+        </div>
+        <div class="category-tab">
+          <ul class="tab-list">
+            <li><button type="button" class="active" data-cate="seol">전체</button></li>
+            <li><button type="button" data-cate="health">건강식품</button></li>
+            <li><button type="button" data-cate="fruit">과일세트</button></li>
+            <li><button type="button" data-cate="meat">한우</button></li>
+            <li><button type="button" data-cate="seafood">굴비·수산</button></li>
+            <li><button type="button" data-cate="oil">통조림·식용유</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-container">
+        <ul class="product-list">
+          </ul>
+      </div>
     </section>
   </div>
   </div>
